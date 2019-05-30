@@ -1,3 +1,19 @@
-<p>
-  dashboard works!
-</p>
+<div style="text-align:center" *ngIf="user">
+  <h1>Welcome {{ user.displayName }}, </h1>
+  <h4>Here is what you look like: </h4>
+  <p>
+    <img [src]="user.photoURL">
+  </p>
+  <p>
+    <a routerLink="/privacy-policy">View our Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/terms-of-service"> Read our Terms of service</a>
+  </p>
+  <p>
+    To sign out, simply click the sign out button.
+  </p>
+  <button class="sign-out" (click)="SignOut()">Sign Out</button>
+</div>
+
+<div *ngIf="!user">
+  <h1>Checking status...</h1>
+</div>

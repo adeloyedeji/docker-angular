@@ -10,6 +10,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     LoginComponent,
     DashboardComponent,
     GuestComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
