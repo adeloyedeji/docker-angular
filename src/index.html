@@ -10,5 +10,25 @@
 </head>
 <body>
   <app-root></app-root>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCpOPNUulYG2QYamkvkI0g3qhxSF7Rf8HU",
+      authDomain: "dockerangular-a086d.firebaseapp.com",
+      databaseURL: "https://dockerangular-a086d.firebaseio.com",
+      projectId: "dockerangular-a086d",
+      storageBucket: "dockerangular-a086d.appspot.com",
+      messagingSenderId: "157383330930",
+      appId: "1:157383330930:web:fd561bad3bef6ead"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </body>
 </html>
