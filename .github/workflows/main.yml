@@ -3,7 +3,7 @@ name: Auto approve
 on:
   workflow_dispatch:
     inputs: pullRequestNumber
-      description: Pull request number to auto-approve
+      description: 'Pull request number to auto-approve'
       required: false
 
 jobs:
