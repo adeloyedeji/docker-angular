@@ -2,7 +2,7 @@ name: Auto approve
 
 on:
   schedule:
-    - cron: * * * * *
+    - cron: '* * * * *'
 
 jobs:
   auto-approve:
