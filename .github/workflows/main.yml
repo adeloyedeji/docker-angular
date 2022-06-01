@@ -1,8 +1,10 @@
 name: Auto approve
 
 on:
-  schedule:
-    - cron: '* * * * *'
+  workflow_dispatch:
+    inputs: pullRequestNumber
+      description: Pull request number to auto-approve
+      required: false
 
 jobs:
   auto-approve:
