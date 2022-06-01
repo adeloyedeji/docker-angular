@@ -5,7 +5,7 @@ on:
     inputs: 
       pullRequestNumber:
         description: 'Pull request number to auto-approve'
-        required: true
+        required: false
 
 jobs:
   auto-approve:
@@ -17,4 +17,4 @@ jobs:
       if: github.actor == 'dependabot[bot]' || github.actor == 'adeloyedeji'
       with:
         github-token: ${{ secrets.DEPENDABOT_TOKEN }}
-        pull-request-number: ${{ github.event.inputs.pullRequestNumber }}
+        pull-request: ${{ github.event.inputs.pullRequestNumber }}
