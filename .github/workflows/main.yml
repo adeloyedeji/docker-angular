@@ -1,23 +1,11 @@
 name: Auto approve
 
 on:
-  pull_request:
-  
-  pull_request_target:
-    types:
-      - opened
-      - synchronized
-      - reopened
-      - edited
-      - labeled
-      - unlabeled
-      - ready_for_review
-      
   workflow_dispatch:
     inputs: 
       pullRequestNumber:
         description: 'Pull request number to auto-approve'
-        required: false
+        required: true
 
 jobs:
   auto-approve:
@@ -26,7 +14,7 @@ jobs:
       pull-requests: write
     steps:
     - uses: hmarr/auto-approve-action@v2
-      if: github.actor == 'dependabot[bot]' || github.actor == 'adeloyedeji'
+      if: github.actor == 'dependabot[bot]' || github.actor == 
       with:
         github-token: ${{ secrets.DEPENDABOT_TOKEN }}
-        pull-request: ${{ github.event.inputs.pullRequestNumber }}
+        pull-request-number: ${{ github.event.inputs.pullRequestNumber }}
